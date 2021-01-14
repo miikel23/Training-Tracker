@@ -1,25 +1,25 @@
 # Training-Tracker
 Proyecto para la asignatura Desarrollo Avanzado de Software
 
-## Instalacion
+## Instalación mediante docker-compose
+En caso de no querer realizar los pasos manualmente es posible ejecutar el script de docker-compose
+con el comando `docker-compose up -d`
+
+## Instalación
 Para instalar la aplicacion y hacer uso de ella en localhost es necesario intalar las dependencias
-y ejecutar los scripts del _package.json_:
-`cd src`
+y ejecutar los scripts del _package.json_.
 
-`cd server`
+Comenzamos levantando el backend:
+1. `cd src`
+2. `cd server`
+3. `npm i`
+4. `npm run start`
 
-`npm i`
-
-`npm run start`
-
-Abrimos una nueva consola para el frontend
-`cd src`
-
-`cd client`
-
-`npm i`
-
-`npm run start`
+Abrimos una nueva consola para el frontend:
+1. `cd src`
+2. `cd client`
+3. `npm i`
+4. `npm run start`
 
 En caso de que al momento de crear el fronted se nos notifique que el puereto ya esta en 
 uso y que se abrirá un nuevo puerto decimos **Sí**
