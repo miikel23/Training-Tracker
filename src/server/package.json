@@ -1,0 +1,44 @@
+{
+  "name": "training-tracker-server",
+  "version": "1.0.0",
+  "description": "Trabajo para la asignatura Desarrollo Avanzado de Software de la Universidad de Deusto",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miikel23/Training-Tracker.git"
+  },
+  "author": "Mikel Moreno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miikel23/Training-Tracker/issues"
+  },
+  "homepage": "https://github.com/miikel23/Training-Tracker#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.18",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-engine": "^4.5.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
