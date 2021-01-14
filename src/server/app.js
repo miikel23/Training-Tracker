@@ -22,4 +22,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 //use routes
 app.use('/', usersRouter);
 app.use('/myRoutines',ejercicioRouter);
+app.use("/*", (req, res, next) => {
+    console.log("serving react index.html")
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 module.exports = app;

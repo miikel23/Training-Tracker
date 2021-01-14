@@ -1,0 +1,11 @@
+version: "3"
+services:
+  training_webserver_service:
+    image: "training_webserver"
+    restart: unless-stopped
+    container_name: training_webserver
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "80:3000"

@@ -21,7 +21,7 @@ export default class EditExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/myRoutines/listEjercicios/',  {'data':{"nombre": this.props.match.params.nombre}})
+    axios.get('http://'+window.location.hostname+':'+window.location.port+'/myRoutines/listEjercicios/',  {'data':{"nombre": this.props.match.params.nombre}})
       .then(response => {
         this.setState({
           nombre: response.data.nombre,
@@ -33,11 +33,12 @@ export default class EditExercise extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:3000/users')
+    axios.get('http://'+window.location.hostname+':'+window.location.port+'/users')
       .then(response => {
         if (response.data.model.length > 0) {
           this.setState({
             users: response.data.model.map(user => user.username),
+            username: response.data.model[0].username
           })
         }
       })
@@ -76,7 +77,7 @@ export default class EditExercise extends Component {
     console.log(this.props.match.params)
     console.log(exercise);
 
-    axios.put('http://localhost:3000/myRoutines/updateEjercicio', exercise)
+    axios.put('http://'+window.location.hostname+':'+window.location.port+'/myRoutines/updateEjercicio', exercise)
       .then(res => console.log(res.data));
 
       window.location = '/';

@@ -43,7 +43,7 @@ export default class CreateUser extends Component {
 
     console.log(user);
 
-    axios.post('http://localhost:3000/create', user) 
+    axios.post('http://'+window.location.hostname+':'+window.location.port+'/create', user) 
       .then(res => console.log(res.data));
 
     this.setState({

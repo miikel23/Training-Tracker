@@ -26,7 +26,7 @@ export default class CreateExercise extends Component {
 
   //recuperamos los usuarios creados
   componentDidMount() {
-    axios.get('http://localhost:3000/users')
+    axios.get('http://'+window.location.hostname+':'+window.location.port+'/users')
       .then(response => {
         if (response.data.model.length > 0) {
           this.setState({
@@ -84,7 +84,7 @@ export default class CreateExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('http://localhost:3000/myRoutines/submitEjercicio', exercise)
+    axios.post('http://'+window.location.hostname+':'+window.location.port+'/myRoutines/submitEjercicio', exercise)
       .then(res => console.log(res.data));
 
     window.location = '/';

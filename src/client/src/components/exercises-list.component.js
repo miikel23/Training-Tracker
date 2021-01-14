@@ -24,7 +24,7 @@ export default class ExercisesList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/myRoutines/listEjerciciosAll')
+    axios.get('http://'+window.location.hostname+':'+window.location.port+'/myRoutines/listEjerciciosAll')
       .then(response => {
         console.log(response);
         this.setState({ exercises: response.data.model })
@@ -35,7 +35,7 @@ export default class ExercisesList extends Component {
   }
 
   deleteExercise(id) {
-    axios.delete('http://localhost:3000/myRoutines/deleteEjercicio', {'data':{"_id": id}})
+    axios.delete('http://'+window.location.hostname+':'+window.location.port+'/myRoutines/deleteEjercicio', {'data':{"_id": id}})
       .then(response => { console.log(response.data.model)});
 
     this.setState({
