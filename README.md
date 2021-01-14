@@ -29,7 +29,7 @@ Para hacer uso de la aplicacion local,si el propio React.js no lo abre en el nav
 introduciremos en el navegador *localhost:3001*.
 
 En caso de querer probar la aplicacion desplegada en Clouding.io introducir la siguiente IP
-en el navegador `http://46.183.113.226/`
+en el navegador http://46.183.113.226/
 
 ## Github
 https://github.com/miikel23/Training-Tracker
